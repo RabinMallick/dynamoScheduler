@@ -1,0 +1,17 @@
+{
+  "name": "dynamoscheduler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amazon-product-api": "^0.4.4",
+    "aws-sdk": "^2.375.0",
+    "cheerio": "^1.0.0-rc.2",
+    "request-promise": "^4.2.2"
+  }
+}
