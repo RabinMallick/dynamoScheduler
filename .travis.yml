@@ -1,0 +1,44 @@
+language: node_js
+services: docker
+node_js: 8.10
+
+env:
+  global:
+
+    - AWS_ACCESS_KEY_ID=AKIAIH3VDIBXISAH2LOQ
+    - AWS_DEFAULT_REGION=us-east-2
+    - LAMBDA_NAME=dynamoScheduler
+    #- LAMBDA_DESCRIPTION=...
+    #- LAMBDA_TIMEOUT=...
+    - LAMBDA_ROLE=arn:aws:iam::431009295608:role/service-role/lambdaCustomRole
+    - LAMBDA_ALIAS=prod
+
+    - LAMBDA_RUNTIME=nodejs8.10
+    - LAMBDA_MODULE=index
+    #- LAMBDA_HANDLER=handler
+    #- NPM_EMAIL=tdmalone@gmail.com
+
+    # # AWS_SECRET_ACCESS_KEY
+    # - secure: ...
+    
+    # # NPM_TOKEN
+    # - secure: ...
+    
+cache:
+  #yarn: true
+  directories:
+    - node_modules
+
+# install:
+
+#   Install dependencies.
+#   - yarn
+
+#   Install Terraform for checking infrastructure configuration.
+#   - curl --location https://releases.hashicorp.com/terraform/0.11.5/terraform_0.11.5_linux_amd64.zip > terraform.zip
+#   - unzip terraform.zip
+
+# env:
+#   - TEST_DIR = test
+
+# script: cd $TEST_DIR && npm install && npm test
