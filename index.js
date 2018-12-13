@@ -130,7 +130,7 @@ exports.handler = (event, context, callback) => {
                         ExpressionAttributeValues: {
                             ":ls": "FAILED"
                         },
-                        ReturnValues: "UPDATED_NEW"
+                        ReturnValues: "UPDATE_FAIL"
                     };
 
                     docClient.update(succeedParams, function (err, updateData) {
